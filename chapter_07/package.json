@@ -2,9 +2,10 @@
   "name": "wordcount",
   "version": "1.0.0",
   "description": "A Word Count App to demonstrate command line tools",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "preferGlobal": true,
+  "bin": {
+	"wordcount" : "bin/wordCount"
   },
   "author": "Christoph Forster",
   "license": "ISC"
