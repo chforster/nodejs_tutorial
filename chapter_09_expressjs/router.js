@@ -1,8 +1,6 @@
+var controller = require('./controller');
+
 module.exports = function(app) {
-	app.get('/', function(req, res) {
-		res.send('My first express application');
-	});
-	app.get('/list', function(req, res) {
-		res.send('Gamma, Helm, Johnson, Forster');
-	});
+	app.get('/', controller.indexAction);
+	app.get('/list', controller.listAction);
 }
