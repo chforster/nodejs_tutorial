@@ -1,4 +1,5 @@
 var Person = require('./model');
+var view = require('./view');
 
 module.exports = {
 	indexAction: indexAction,
@@ -11,5 +12,5 @@ function indexAction(req, res) {
 
 function listAction(req, res) {
 	var person = new Person();
-	res.send(person.getPersons().join(', '));
+	res.send(view(person.getPersons()));
 }
