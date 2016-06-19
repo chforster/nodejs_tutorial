@@ -1,3 +1,5 @@
+var Person = require('./model');
+
 module.exports = {
 	indexAction: indexAction,
 	listAction: listAction
@@ -8,5 +10,6 @@ function indexAction(req, res) {
 }
 
 function listAction(req, res) {
-	res.send('Gamma, Helm, Johnson, Forster');
+	var person = new Person();
+	res.send(person.getPersons().join(', '));
 }
