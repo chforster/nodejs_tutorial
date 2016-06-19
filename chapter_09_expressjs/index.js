@@ -1,9 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
-	res.send('My first express application');
-});
+require('./router')(app);
 
 app.listen(8080, function() {
 	console.log("Server linstening on port 8080");
